@@ -1,0 +1,36 @@
+﻿@{
+    ViewBag.Title = "Dashboard";
+    Layout = "~/Views/Shared/_LayoutDashboard.cshtml";
+}
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css" integrity="sha512-aOG0c6nPNzGk+5zjwyJaoRUgCdOrfSDhmMID2u4+OIslr0GjpLKo7Xm0Ao3xmpM4T8AmIouRkqwj1nrdVsLKEQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="/css/site.css" asp-append-version="true" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+<div class="container-fluid" style="font-family: 'Roboto', sans-serif;">
+    <div class="row">
+        <div class="col-sm-12 text-center">
+            <h3 style="color:#006600; padding:20px 10px;">ADMIN DASHBOARD - COMPLAINTS MASTER RECORD</h3>
+        </div>
+    </div>
+   
+    <div class="row">
+        <div class="col-sm-12">
+            <div id="tabs">
+                <ul>
+                    <li class="active">@Html.ActionLink("Vehicle Owners Copmlaints", "GetVehicleOwnersComplaints", "Users")</li>
+                    <li>@Html.ActionLink("Gas Stations Complaints", "GetGasStationOwnersComplaints", "Users")</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" integrity="sha512-uto9mlQzrs59VwILcLiRYeLKPPbS/bT71da/OEBYEwcdNUk8jYIy+D176RYoop1Da+f9mvkYrmj5MCLZWEtQuA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.easytabs/3.2.0/jquery.easytabs.min.js" integrity="sha512-PIeHEefO3UOxPQ6b+3/XriKG36VTn7zzhndvXdkFdrfSzQY0aMHzDHRcuqUCEiGSLxoXgO/WGlJI8yXFH1+3Gw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.4/js/jquery.dataTables.min.js"></script>
+<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script type="text/javascript">
+    $("#tabs").tabs();
+</script>

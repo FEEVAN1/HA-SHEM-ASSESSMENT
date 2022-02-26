@@ -1,0 +1,23 @@
+﻿@model HASHEM_ASSESSMENT_PROJECT.DATA.DTO.ViewDocumentDTO
+
+@{
+    ViewData["Title"] = "View Vehicle Owners Complaint Document";
+    Layout = "~/Views/Shared/_LayoutDashboard.cshtml";
+}
+
+<div class="container-fluid" style="font-family: 'Roboto', sans-serif;">
+    <div class="row">
+        <div class="col-sm-12 text-center">
+            <h3 style="color:#006600; padding:20px 10px;">ADMIN DASHBOARD - VIEW DOCUMENT</h3>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <img src="/UserUploadedFiles/@Model.VehicleOwnershipProofUrl" class="img-fluid"/>
+        </div>
+        <div class="col-sm-6">
+            <img src="/UserUploadedFiles/@Model.PurchaseReceipt" class="img-fluid" />
+        </div>
+    </div>
+</div>
+

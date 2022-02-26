@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <RootNamespace>HASHEM_ASSESSMENT_PROJECT.BUSINESSLOGIC</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\HASHEM-ASSESSMENT-PROJECT.DATA\HASHEM-ASSESSMENT-PROJECT.DATA.csproj" />
+  </ItemGroup>
+
+</Project>

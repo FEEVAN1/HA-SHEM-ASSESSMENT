@@ -1,0 +1,87 @@
+﻿@model IEnumerable<HASHEM_ASSESSMENT_PROJECT.DATA.Models.VehicleOwnersComplaints>
+
+@{
+    Layout = null;
+}
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.4/css/jquery.dataTables.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.4/js/jquery.dataTables.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $.noConflict();
+        $('#vehicle').DataTable();
+    });
+</script>
+<div class="container-fluid" style="font-family: 'Roboto', sans-serif;">
+    <div class="row">
+        <div class="col-sm-12 text-center">
+            <h3 style="color:#006600">Vehicle Owners Complaints Master List</h3>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <table class="table table-striped display" id="vehicle">
+                <thead>
+                    <tr>
+                        <th>
+                            @Html.DisplayNameFor(model => model.FirstName)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.LastName)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.VehicleType)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.FuelPurhcaseDate)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.GasStationName)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.PurchaseOutlet)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.LitresPurchase)
+                        </th>
+                        <th>Documents</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.FirstName)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.LastName)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.VehicleType)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.FuelPurhcaseDate)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.GasStationName)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.PurchaseOutlet)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.LitresPurchase)
+                            </td>
+                            <td class="text-center">
+                                <a class="btn btn-success text-white" asp-action="ViewVehicleOwnersComplaintDocument" asp-route-id="@item.Id">View </a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

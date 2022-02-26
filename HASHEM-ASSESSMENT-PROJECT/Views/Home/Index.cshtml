@@ -1,0 +1,44 @@
+﻿@{
+    ViewData["Title"] = "HOME";
+}
+
+
+
+<div id="area" class="area">
+    <div class="cover">
+        <div class="container" style="font-family: 'Roboto', sans-serif;">
+            <div class="row">
+                <div class="col-sm-12 text-center" style="margin-top:25px">
+                    <h3 style="color:#006600"> ADULTERATED FUEL VICTIMS COMPENSATION PORTAL </h3>
+                    <hr />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12" style="padding: 10px; font-family: 'Roboto', sans-serif; text-align:justify;">
+                    <div style="width: 700px; height: 300px; margin: 0 auto; padding: 10px; position: relative;">
+                        Dear Fellow Nigerians, lately, there have been reported cases of contaminated petrol sold at fueling stations which damaged cars. Unsuspecting users and gas station owners have been victims of this low-quality fuel imported without proper quality controls.
+                        <br /> <br />
+                        <p> We at The Department of Petroleum Resources (DPR), as the regulatory authority, are concerned and seeks to compensate car owners and retrieve contaminated fuel from affected fueling stations across the country.</p>
+                        
+                        We have been mandated by the Federal Government to take steps to mitigate the damaging effects of the unfortunate incidence, to this end, this portal has been developed to help us collate data from affect Vehicle and Gas station owners.
+                        <br /><br />
+                        Please click on either of the links below to get started.
+                    </div>
+                    <hr />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6 text-center">
+                    <a class="btn btn-success" asp-area="" asp-controller="Home" asp-action="VehicleOwners">
+                        Continue As A Vehicle Owner
+                    </a>
+                </div>
+                <div class="col-sm-6 text-center">
+                    <a class="btn btn-success" asp-area="" asp-controller="Home" asp-action="GasStationOwners">
+                        Continue As A Station Owner
+                    </a>
+                </div>
+            </div>
+        </div>      
+    </div>
+</div>

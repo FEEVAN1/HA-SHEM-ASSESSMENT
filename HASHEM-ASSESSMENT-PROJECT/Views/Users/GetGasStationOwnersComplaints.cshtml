@@ -1,0 +1,69 @@
+﻿@model IEnumerable<HASHEM_ASSESSMENT_PROJECT.DATA.Models.GasStationComplaints>
+
+@{
+    Layout = null;
+}
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.4/css/jquery.dataTables.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.4/js/jquery.dataTables.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $.noConflict();
+        $('#stations').DataTable();
+    });</script>
+<div class="container-fluid" style="font-family: 'Roboto', sans-serif;">
+    <div class="row">
+        <div class="col-sm-12 text-center">
+            <h3 style="color:#006600">Station Owners Complaints Master List</h3>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <table class="table table-striped display" id="stations">
+                <thead>
+                    <tr>
+                        <th>
+                            @Html.DisplayNameFor(model => model.BusinessName)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.SupplyDate)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.SupplyLocation)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.TotalQuantityRecieved)
+                        </th>
+                        <th>Documents</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.BusinessName)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.SupplyDate)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.SupplyLocation)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.TotalQuantityRecieved)
+                            </td>
+                            <td class="text-center">
+                                <a class="btn btn-success text-white" asp-action="ViewGasStationOwnersComplaintsDocument" asp-route-id="@item.Id">View</a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
